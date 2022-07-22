@@ -10,7 +10,7 @@ function mostra(frase) {
 
 function calculaImc(altura, peso) {
 	var imc = peso / (altura * altura);
-	mostra("O imc calculado é " + imc);
+	mostra("Os imc de exemplo calculado é " + imc);
 }
 
 calculaImc(1.71, 73);
@@ -24,7 +24,7 @@ var imcFlavio = calculaImc2(1.71, 73);
 var imcAmigo = calculaImc2(172, 68);
 var totalImc = calculaImc2(1.71, 73) + imcAmigo;
 
-mostra("A soma dos imc's é " + totalImc);
+mostra("A soma dos imc's entre Flavio e seu amigo é " + totalImc);
 
 function calculaImc3(altura3, peso3) {
 	return peso3 / (altura3 * altura3);
@@ -37,3 +37,15 @@ var pesoInformado = prompt(nome + ", informe seu peso");
 var imc = calculaImc3(alturaInformada, pesoInformado);
 
 mostra(nome + ", o seu IMC calculado é " + imc);
+
+if(imc < 18.5) {
+	mostra("Você está abaixo do recomendado");
+}
+
+if(imc > 35) {
+	mostra("Você está acima do recomendado");
+}
+
+if(imc >= 18.5 && imc <= 35) {
+	mostra("Seu IMC está excelente!");
+}
